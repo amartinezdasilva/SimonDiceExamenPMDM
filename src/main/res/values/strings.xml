@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SecuenciaColores</string>
+    <color name="verde1">#2A8F2E</color>
+    <color name="rojo1">#CD3813</color>
+    <color name="azul1">#136CF1</color>
+    <color name="amarillo1">#DFD943</color>
+</resources>
