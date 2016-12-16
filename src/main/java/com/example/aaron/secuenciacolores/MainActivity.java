@@ -32,15 +32,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Creamos el Intent
-        Intent intent = new Intent(MainActivity.this, ActivityExamen.class);
-        //Creamos la información a pasar entre actividades
-        Bundle b = new Bundle();
-        b.putString("resultado",txtfa.toString());
-        //añadimos la informacion al intent
-        intent.putExtras(b);
-        //iniciamos la nueva actividad
-        startActivity(intent);
 
 
 
@@ -232,6 +223,15 @@ public class MainActivity extends AppCompatActivity {
 
     void Comprobar(){
             if(cont==4) {
+                //Creamos el Intent
+                Intent intent = new Intent(MainActivity.this, ActivityExamen.class);
+                //Creamos la información a pasar entre actividades
+                Bundle b = new Bundle();
+                b.putString("resultado",txtfa.toString());
+                //añadimos la informacion al intent
+                intent.putExtras(b);
+                //iniciamos la nueva actividad
+                startActivity(intent);
 
 
 
