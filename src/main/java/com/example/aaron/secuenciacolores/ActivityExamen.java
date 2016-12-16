@@ -1,25 +1,30 @@
 package com.example.aaron.secuenciacolores;
 
+import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
  * Created by Aaron on 16/12/2016.
  */
 
-public class ActivityExamen extends MainActivity{
-    void Comprobar(){
-        if(cont==4) {
-            String x = randomColor.toString();
-            String y = elegirColor.toString();
+public class ActivityExamen extends MainActivity{// extendemos de la MainActivity para poder acceder a todos sus metodos
+    private TextView txtfalloacierto;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_examen);
 
-            if (x.equalsIgnoreCase(y)) {
+        //Localizar los controles
+        txtfalloacierto = (TextView)findViewById(R.id.txtfalloacierto);
 
-                Toast.makeText(getApplicationContext(), "ACERTASTE", Toast.LENGTH_SHORT).show();
 
-            } else {
-                Toast.makeText(getApplicationContext(), "FALLO", Toast.LENGTH_SHORT).show();
-            }
+        //Recuperamos la información pasada en el intent
+        Bundle bundle = this.getIntent().getExtras();
 
-        }
+        //Construimos el mensaje a mostrar
+        txtfalloacierto.setText(bundle.getString("resultado"));
     }
 }
+
+
